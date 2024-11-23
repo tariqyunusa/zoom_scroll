@@ -37,7 +37,7 @@ const ThreeScene = () => {
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        renderer.setClearColor('#FAF9F6', 1); // Off-white background
+        renderer.setClearColor('#FAF9F6', 1); 
 
         if (mountRef.current) {
             mountRef.current.appendChild(renderer.domElement);
@@ -57,7 +57,7 @@ const ThreeScene = () => {
                 side: THREE.DoubleSide,
                 uniforms: {
                     uTexture: { value: texture },
-                    progress: { value: 0 }, // Reverted progress logic
+                    progress: { value: 0 }, 
                 },
             });
 
@@ -108,7 +108,7 @@ const ThreeScene = () => {
         };
     };
 
-    // Initialize the scene immediately
+  
     React.useLayoutEffect(() => {
         const cleanup = initializeScene();
         return cleanup;
